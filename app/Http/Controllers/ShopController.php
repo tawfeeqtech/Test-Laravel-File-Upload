@@ -20,8 +20,6 @@ class ShopController extends Controller
         ->resize(500, 500)
         ->save(storage_path('/app/shops/resized-' . $filename));
 
-
-
         return 'Success';
     }
 }
