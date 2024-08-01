@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
+
 class ShopController extends Controller
 {
     public function store(Request $request)
@@ -18,6 +19,9 @@ class ShopController extends Controller
         Image::make(storage_path('/app/shops/' . $filename))
         ->resize(500, 500)
         ->save(storage_path('/app/shops/resized-' . $filename));
+
+
+
         return 'Success';
     }
 }
